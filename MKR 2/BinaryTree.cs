@@ -7,14 +7,14 @@ namespace MKR_2
 {
     public class BinaryTree
     {
-        public Node Root { get; set; }
+        public TreeNode Root { get; set; }
         
-        public BinaryTree(Node root)
+        public BinaryTree(TreeNode root)
         {
             Root = root;
         }
 
-        public Node RemoveNode(int key, Node root)
+        public TreeNode RemoveNode(int key, TreeNode root)
         {
             if (root == null)
             {
@@ -47,7 +47,7 @@ namespace MKR_2
             return root;
         }
 
-        private int GetMinValue(Node root)
+        private int GetMinValue(TreeNode root)
         {
             int minValue = root.Number;
 
@@ -60,9 +60,9 @@ namespace MKR_2
             return minValue;
         }
 
-        public Node FindNode(Node nodeToFind, Node root)
+        public TreeNode FindNode(TreeNode nodeToFind, TreeNode root)
         {
-            Node current = root;
+            TreeNode current = root;
 
             if (current == null)
             {
@@ -84,9 +84,9 @@ namespace MKR_2
             }
         }
 
-        public void AddNode(Node nodeToAdd, Node root)
+        public void AddNode(TreeNode nodeToAdd, TreeNode root)
         {
-            Node current = root;
+            TreeNode current = root;
             
             if (current.Number > nodeToAdd.Number)
             {
@@ -112,7 +112,7 @@ namespace MKR_2
             }
         }
 
-        public void PreOrderTraversal(Node root)
+        public void PreOrderTraversal(TreeNode root)
         {
             if (root != null)
             {

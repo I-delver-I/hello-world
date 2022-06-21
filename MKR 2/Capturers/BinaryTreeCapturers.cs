@@ -23,10 +23,10 @@ namespace MKR_2.Capturers
             return tree;
         }
 
-        public static Node CaptureNode()
+        public static TreeNode CaptureNode()
         {
             bool exceptionIsCaught = true;
-            Node result = null;
+            TreeNode result = null;
 
             while (exceptionIsCaught)
             {
@@ -35,7 +35,7 @@ namespace MKR_2.Capturers
                 try
                 {
                     System.Console.Write("Please, enter the node data (number): ");
-                    result = new Node(int.Parse(Console.ReadLine()));
+                    result = new TreeNode(int.Parse(Console.ReadLine()));
                 }
                 catch (FormatException)
                 {

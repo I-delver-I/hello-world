@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 
 namespace MKR_2
 {
-    public class Node
+    public class TreeNode
     {
         public int Number { get; set; }
-        public Node LeftNode { get; set; }
-        public Node RightNode { get; set; }
-        public Node Parent { get; set; }
+        public TreeNode LeftNode { get; set; }
+        public TreeNode RightNode { get; set; }
+        public TreeNode Parent { get; set; }
 
-        public Node(int number)
+        public TreeNode(int number)
         {
             Number = number;
         }

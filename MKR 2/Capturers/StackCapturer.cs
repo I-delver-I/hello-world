@@ -20,7 +20,7 @@ namespace MKR_2.Capturers
                 {
                     System.Console.Write("Please, enter the number to push: ");
                     result.Push(int.Parse(Console.ReadLine()));
-                    System.Console.WriteLine("Hit <Backscpace> to end typing any key to continue");
+                    System.Console.WriteLine("Hit <Backscpace> to end typing or any key to continue");
                 }
                 catch (FormatException)
                 {
@@ -39,7 +39,7 @@ namespace MKR_2.Capturers
             {
                 System.Console.Write("Removed value: ");
                 System.Console.WriteLine(stack.Pop());
-                System.Console.WriteLine("Hit <Backscpace> to end typing any key to continue");
+                System.Console.WriteLine("Hit <Backscpace> to end typing or any key to continue");
             }
             while (Console.ReadKey().Key != ConsoleKey.Backspace);
         }
