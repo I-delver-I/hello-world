@@ -39,20 +39,27 @@ namespace MKR_2
 
         internal void DeleteNodebyKey(CustomLinkedList singlyList, int key)  
         {  
-            Node temp = singlyList.head;  
-            Node prev = null;  
-            if (temp != null && temp.data == key) {  
-                singlyList.head = temp.next;  
+            CustomLinkedListNode temp = singlyList.Head;  
+            CustomLinkedListNode prev = null;  
+
+            if (temp != null && temp.Data == key) 
+            {  
+                singlyList.Head = temp.Next;  
+
                 return;  
             }  
-            while (temp != null && temp.data != key) {  
+            
+            while (temp != null && temp.Data != key) 
+            {  
                 prev = temp;  
-                temp = temp.next;  
+                temp = temp.Next;  
             }  
-            if (temp == null) {  
+
+            if (temp == null) 
+            {  
                 return;  
             }  
-            prev.next = temp.next;  
+            prev.Next = temp.Next;  
         }  
     }
 }
