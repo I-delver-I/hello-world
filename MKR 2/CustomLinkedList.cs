@@ -6,60 +6,86 @@ using MKR_2.Nodes;
 
 namespace MKR_2
 {
-    public class CustomLinkedList
+    public class CustomLinkedList<T>
     {
-        public CustomLinkedListNode Head { get; set; }
-        
-        internal void InsertLast(CustomLinkedList singleList, int data)    
-        {    
-            CustomLinkedListNode node = new CustomLinkedListNode(data);  
+        private CustomLinkedListNode<T> _head;
+        private CustomLinkedListNode<T> _tail;
 
-            if (singleList.Head == null) 
-            {    
-                singleList.Head = node;  
+        public int Count { get; set; }
 
-                return;    
-            }    
+        public void AddNode(T data)
+        {
+            CustomLinkedListNode<T> node = new CustomLinkedListNode<T>(data);
 
-            CustomLinkedListNode lastNode = GetLastNode(singleList);    
-            lastNode.Next = node;    
+            if (_head == null)
+            {
+                _head = node;
+            }
+            else
+            {
+                _tail.Next = node;
+            }
+
+            _tail = node;
+            Count++;
         }
 
-        public CustomLinkedListNode GetLastNode(CustomLinkedList singleList) 
-        {  
-            CustomLinkedListNode tempList = singleList.Head;  
+        public bool Remove(T data)
+        {
+            CustomLinkedListNode<T> current = _head;
+            CustomLinkedListNode<T> previous = null;
+ 
+            while (current != null)
+            {
+                if (current.Data.Equals(data))
+                {
+                    // Если узел в середине или в конце
+                    if (previous != null)
+                    {
+                        // убираем узел current, теперь previous ссылается не на current, а на current.Next
+                        previous.Next = current.Next;
+ 
+                        // Если current.Next не установлен, значит узел последний,
+                        // изменяем переменную tail
+                        if (current.Next == null)
+                        {
+                            _tail = previous;
+                        }
+                    }
+                    else
+                    {
+                        // если удаляется первый элемент
+                        // переустанавливаем значение head
+                        _head = _head.Next;
+ 
+                        // если после удаления список пуст, сбрасываем tail
+                        if (_head == null)
+                        {
+                            _tail = null;
+                        }
+                    }
+                    
+                    Count--;
+                    
+                    return true;
+                }
+ 
+                previous = current;
+                current = current.Next;
+            }
 
-            while (tempList.Next != null) 
-            {  
-                tempList = tempList.Next;  
-            }  
-
-            return tempList;  
+            return false;
         }
 
-        internal void DeleteNodebyKey(CustomLinkedList singlyList, int key)  
-        {  
-            CustomLinkedListNode temp = singlyList.Head;  
-            CustomLinkedListNode prev = null;  
+        public void Print()
+        {   
+            CustomLinkedListNode<T> current = _head;
 
-            if (temp != null && temp.Data == key) 
-            {  
-                singlyList.Head = temp.Next;  
-
-                return;  
-            }  
-            
-            while (temp != null && temp.Data != key) 
-            {  
-                prev = temp;  
-                temp = temp.Next;  
-            }  
-
-            if (temp == null) 
-            {  
-                return;  
-            }  
-            prev.Next = temp.Next;  
-        }  
+            while (current != null)
+            {
+                System.Console.WriteLine(current);
+                current = current.Next;
+            }
+        }
     }
 }

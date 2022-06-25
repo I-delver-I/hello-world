@@ -7,7 +7,11 @@ namespace MKR_2
     {    
         public static void Main(string[] args)
         {
-            
+            CustomLinkedList<string> list = new CustomLinkedList<string>();
+            list.AddNode("second");
+            list.AddNode("third");
+            list.AddNode("fourth");
+            list.Print();
         }
 
         
