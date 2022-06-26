@@ -6,16 +6,23 @@ namespace Custom_Stack
     {
         public static void Main(string[] args)
         {
-            CustomStack<int> stack = StackCapturer.CaptureStack();
+            //CustomStackLinkedList<int> stack = StackCapturer.CaptureStack();
 
-            System.Console.WriteLine($"Pop from stack {stack.Pop()}");
+            //System.Console.WriteLine($"Pop from stack {stack.Pop()}");
 
-            foreach (var item in stack)
-            {
-                System.Console.WriteLine(item);
-            }
+            CustomStackFixed<int> stack = new CustomStackFixed<int>();
+            stack.Push(243);
+            stack.Push(777);
+            stack.Push(793749);
+            stack.Push(-432);
 
-            //stack.Print();
+            System.Console.WriteLine($"Stack itself {stack}");
+
+            stack.Print();
+
+            System.Console.WriteLine($"Popped {stack.Pop()}");
+            
+            stack.Print();
         }
     }
 }

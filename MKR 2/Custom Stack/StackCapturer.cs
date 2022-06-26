@@ -7,10 +7,10 @@ namespace Custom_Stack
 {
     public class StackCapturer
     {
-        public static CustomStack<int> CaptureStack()
+        public static CustomStackLinkedList<int> CaptureStack()
         {
             bool exceptionIsCaught = true;
-            CustomStack<int> result = new CustomStack<int>();
+            CustomStackLinkedList<int> result = new CustomStackLinkedList<int>();
 
             do
             {
@@ -33,7 +33,7 @@ namespace Custom_Stack
             return result;
         }
 
-        public static void CaptureRemovingOfStackElements(CustomStack<int> stack)
+        public static void CaptureRemovingOfStackElements(CustomStackLinkedList<int> stack)
         {
             do
             {

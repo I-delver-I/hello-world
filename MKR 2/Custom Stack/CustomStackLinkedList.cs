@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Custom_Stack
 {
-    public class CustomStack<T> : IEnumerable<T>
+    public class CustomStackLinkedList<T> : IEnumerable<T>
     {
         private Node<T> _head;
  
