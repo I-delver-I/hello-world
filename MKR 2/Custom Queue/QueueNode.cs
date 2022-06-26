@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MKR_2.Nodes
+namespace Custom_Queue
 {
-    public class CustomLinkedListNode<T> 
-    {  
-        public T Data { get; set; }
-        public CustomLinkedListNode<T> Next { get; set; }
+    public class QueueNode
+    {
+        public int Data { get; set; }
+        public QueueNode Next { get; set; }
 
-        public CustomLinkedListNode(T data) 
+        public QueueNode(int data)
         {
             Data = data;
         }
@@ -19,5 +19,5 @@ namespace MKR_2.Nodes
         {
             return $"{Data}";
         }
-    }  
+    }
 }

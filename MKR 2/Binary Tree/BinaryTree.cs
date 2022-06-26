@@ -2,9 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MKR_2.Nodes;
 
-namespace MKR_2
+namespace Binary_Tree
 {
     public class BinaryTree
     {

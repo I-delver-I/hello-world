@@ -2,9 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MKR_2.Nodes;
 
-namespace MKR_2
+namespace Custom_Queue
 {
     public class CustomQueue
     {
@@ -37,6 +36,18 @@ namespace MKR_2
             _head = _head.Next;
 
             return tempData;
+        }
+
+        public void Print()
+        {
+            QueueNode current = _head;
+
+            do
+            {
+                System.Console.WriteLine(current);
+                current = current.Next;
+            }
+            while (current != null);
         }
     }
 }

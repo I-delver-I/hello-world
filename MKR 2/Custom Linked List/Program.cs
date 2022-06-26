@@ -1,19 +1,20 @@
 ﻿using System;
-using MKR_2.Capturers;
 
-namespace MKR_2
+namespace Custom_Linked_List
 {
     public class Program
-    {    
+    {
         public static void Main(string[] args)
         {
             CustomLinkedList<string> list = new CustomLinkedList<string>();
-            list.AddNode("second");
-            list.AddNode("third");
-            list.AddNode("fourth");
+            list.AddNode("oh");
+            list.AddNode("you");
+            list.AddNode("nor");
+            list.AddNode("time");
+
+            list.Remove("nor");
+            
             list.Print();
         }
-
-        
     }
 }

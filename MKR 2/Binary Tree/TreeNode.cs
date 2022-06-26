@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MKR_2.Nodes
+namespace Binary_Tree
 {
     public class TreeNode
     {

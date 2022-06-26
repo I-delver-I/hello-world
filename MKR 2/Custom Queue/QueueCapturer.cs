@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MKR_2.Capturers
+namespace Custom_Queue
 {
     public class QueueCapturer
     {

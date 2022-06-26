@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MKR_2.Capturers
+namespace Custom_Stack
 {
     public class StackCapturer
     {
-        public static Stack CaptureStack()
+        public static CustomStack<int> CaptureStack()
         {
             bool exceptionIsCaught = true;
-            Stack result = new Stack();
+            CustomStack<int> result = new CustomStack<int>();
 
             do
             {
@@ -33,7 +33,7 @@ namespace MKR_2.Capturers
             return result;
         }
 
-        public static void CaptureRemovingOfStackElements(Stack stack)
+        public static void CaptureRemovingOfStackElements(CustomStack<int> stack)
         {
             do
             {
@@ -42,12 +42,6 @@ namespace MKR_2.Capturers
                 System.Console.WriteLine("Hit <Backscpace> to end typing or any key to continue");
             }
             while (Console.ReadKey().Key != ConsoleKey.Backspace);
-        }
-
-        public static void MainCode()
-        {
-            Stack stack = CaptureStack();
-            CaptureRemovingOfStackElements(stack);
         }
     }
 }

@@ -2,9 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using MKR_2.Nodes;
 
-namespace MKR_2
+namespace Custom_Linked_List
 {
     public class CustomLinkedList<T>
     {
