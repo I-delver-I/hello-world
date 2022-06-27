@@ -8,8 +8,8 @@ namespace Custom_Linked_List
 {
     public class CircularLinkedList<T> : IEnumerable<T>
     {
-        private CircularListNode<T> _head; // головной/первый элемент
-        private CircularListNode<T> _tail; // последний/хвостовой элемент
+        private Node<T> _head; // головной/первый элемент
+        private Node<T> _tail; // последний/хвостовой элемент
         private int _count;  // количество элементов в списке
 
         public int Count => _count;
@@ -18,7 +18,7 @@ namespace Custom_Linked_List
         // добавление элемента
         public void Add(T data)
         {
-            CircularListNode<T> node = new CircularListNode<T>(data);
+            Node<T> node = new Node<T>(data);
             // если список пуст
             if (_head == null)
             {
@@ -37,8 +37,8 @@ namespace Custom_Linked_List
         }
         public bool Remove(T data)
         {
-            CircularListNode<T> current = _head;
-            CircularListNode<T> previous = null;
+            Node<T> current = _head;
+            Node<T> previous = null;
  
             if (IsEmpty) return false;
  
@@ -95,7 +95,7 @@ namespace Custom_Linked_List
  
         public bool Contains(T data)
         {
-            CircularListNode<T> current = _head;
+            Node<T> current = _head;
 
             if (current == null)
             {
@@ -123,7 +123,7 @@ namespace Custom_Linked_List
  
         IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
-            CircularListNode<T> current = _head;
+            Node<T> current = _head;
 
             do
             {
