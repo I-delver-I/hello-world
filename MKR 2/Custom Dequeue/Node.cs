@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Custom_Linked_List
+namespace Custom_Dequeue
 {
-    public class CustomLinkedListNode<T> 
-    {  
+    public class Node<T>
+    {
         public T Data { get; set; }
-        public CustomLinkedListNode<T> Next { get; set; }
+        public Node<T> Previous { get; set; }
+        public Node<T> Next { get; set; }
 
-        public CustomLinkedListNode(T data) 
+        public Node(T data)
         {
             Data = data;
         }
 
         public override string ToString()
         {
-            return $"{Data}";
+            return $"{Data} ";
         }
-    }  
+    }
 }

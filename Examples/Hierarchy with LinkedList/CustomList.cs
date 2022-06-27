@@ -3,14 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Custom_Linked_List
+namespace Classes_and_LinkedList
 {
-    public class CustomLinkedList<T>
+    public class CustomList<T>
     {
         private Node<T> _head;
+        public Node<T> Head => _head;
         private Node<T> _tail;
-
+        
         public int Count { get; set; }
+
+        public CustomList()
+        {
+            
+        }
+
+        public CustomList(T[] inputArray)
+        {
+            for (var i = 0; i < inputArray.Length; i++)
+            {
+                AddNode(inputArray[i]);
+            }
+        }
 
         public void AddNode(T data)
         {
@@ -31,7 +45,7 @@ namespace Custom_Linked_List
 
         public bool Remove(T data)
         {
-            Node<T> current = _head;
+            Node<T> current = Head;
             Node<T> previous = null;
  
             while (current != null)
@@ -55,10 +69,10 @@ namespace Custom_Linked_List
                     {
                         // если удаляется первый элемент
                         // переустанавливаем значение head
-                        _head = _head.Next;
+                        _head = Head.Next;
  
                         // если после удаления список пуст, сбрасываем tail
-                        if (_head == null)
+                        if (Head == null)
                         {
                             _tail = null;
                         }
@@ -78,7 +92,7 @@ namespace Custom_Linked_List
 
         public void Print()
         {   
-            Node<T> current = _head;
+            Node<T> current = Head;
 
             while (current != null)
             {
