@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary Tree", "Binary Tree\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Dequeue", "Custom Dequeue\Custom Dequeue.csproj", "{E64BE33A-7D1D-4AB5-B9FA-C8AB79CEDD9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Double Linked List", "Custom Double Linked List\Custom Double Linked List.csproj", "{12ED3E89-FC4F-443A-B970-25BF907790FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{E64BE33A-7D1D-4AB5-B9FA-C8AB79CEDD9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E64BE33A-7D1D-4AB5-B9FA-C8AB79CEDD9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E64BE33A-7D1D-4AB5-B9FA-C8AB79CEDD9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12ED3E89-FC4F-443A-B970-25BF907790FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12ED3E89-FC4F-443A-B970-25BF907790FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12ED3E89-FC4F-443A-B970-25BF907790FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12ED3E89-FC4F-443A-B970-25BF907790FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
