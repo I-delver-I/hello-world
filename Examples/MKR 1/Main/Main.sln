@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Real number 1", "Real numbe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Money", "Money\Money.csproj", "{4AC9507C-2387-42D2-B971-2840B2A190B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrong fraction 2", "Wrong fraction 2\Wrong fraction 2.csproj", "{63EDF91A-45FE-4355-9CEA-39200AA5ED46}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{4AC9507C-2387-42D2-B971-2840B2A190B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AC9507C-2387-42D2-B971-2840B2A190B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AC9507C-2387-42D2-B971-2840B2A190B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63EDF91A-45FE-4355-9CEA-39200AA5ED46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63EDF91A-45FE-4355-9CEA-39200AA5ED46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63EDF91A-45FE-4355-9CEA-39200AA5ED46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63EDF91A-45FE-4355-9CEA-39200AA5ED46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
