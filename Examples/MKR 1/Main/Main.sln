@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrong fraction 2", "Wrong f
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Money 2", "Money 2\Money 2.csproj", "{F2ACE8CF-69CC-4DF3-BF5A-B003BE76B448}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proper fraction", "Proper fraction\Proper fraction.csproj", "{77024A04-BD58-430B-A127-FADE5F958B2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{F2ACE8CF-69CC-4DF3-BF5A-B003BE76B448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2ACE8CF-69CC-4DF3-BF5A-B003BE76B448}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2ACE8CF-69CC-4DF3-BF5A-B003BE76B448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77024A04-BD58-430B-A127-FADE5F958B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77024A04-BD58-430B-A127-FADE5F958B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77024A04-BD58-430B-A127-FADE5F958B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77024A04-BD58-430B-A127-FADE5F958B2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
