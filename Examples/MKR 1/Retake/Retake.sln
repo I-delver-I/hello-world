@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Points", "Points\Points.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whole positive number", "Whole positive number\Whole positive number.csproj", "{249A2A54-ECD2-49D7-8DE7-56BE955A1218}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Direct code", "Direct code\Direct code.csproj", "{DDB0EA0E-3B0F-4BDC-9537-5A9705DE2ED9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{249A2A54-ECD2-49D7-8DE7-56BE955A1218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{249A2A54-ECD2-49D7-8DE7-56BE955A1218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{249A2A54-ECD2-49D7-8DE7-56BE955A1218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDB0EA0E-3B0F-4BDC-9537-5A9705DE2ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDB0EA0E-3B0F-4BDC-9537-5A9705DE2ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDB0EA0E-3B0F-4BDC-9537-5A9705DE2ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDB0EA0E-3B0F-4BDC-9537-5A9705DE2ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
