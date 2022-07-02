@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hierarchy with LinkedList", "Hierarchy with LinkedList\Hierarchy with LinkedList.csproj", "{FA338A8D-4E77-4A75-8003-3EF39330CFAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linked list", "Linked list\Linked list.csproj", "{FA338A8D-4E77-4A75-8003-3EF39330CFAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hierarchy with Set", "Hierarchy with Set\Hierarchy with Set.csproj", "{FDC508D9-5D03-48E3-89A3-D5A8AB8FB084}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Set", "Set\Set.csproj", "{FDC508D9-5D03-48E3-89A3-D5A8AB8FB084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{5AFFBBC1-E562-4D1E-B0CA-E202BED41CE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +26,9 @@ Global
 		{FDC508D9-5D03-48E3-89A3-D5A8AB8FB084}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDC508D9-5D03-48E3-89A3-D5A8AB8FB084}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDC508D9-5D03-48E3-89A3-D5A8AB8FB084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AFFBBC1-E562-4D1E-B0CA-E202BED41CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AFFBBC1-E562-4D1E-B0CA-E202BED41CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AFFBBC1-E562-4D1E-B0CA-E202BED41CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AFFBBC1-E562-4D1E-B0CA-E202BED41CE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
