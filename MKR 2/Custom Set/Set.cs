@@ -8,16 +8,17 @@ namespace Custom_Set
     public class Set
     {
         public const int MaxSize = 256;
-        private uint[] _arr;
+        private int[] _arr;
         private int _size;
+        public int Size => _size;
 
         public Set()
         {
-            _arr = new uint[MaxSize];
+            _arr = new int[MaxSize];
             _size = 0;
         }
 
-        public void AddValue(uint valueToAdd)
+        public void AddValue(int valueToAdd)
         {
             if (_size == MaxSize)
             {
@@ -59,7 +60,7 @@ namespace Custom_Set
 
             for (deleteIndex = 0; (deleteIndex < _size) && (_arr[deleteIndex] != valueToDelete); deleteIndex++)
             {
-                
+                // Incrementing of DeleteIndex
             }
 
             if (deleteIndex == _size)
@@ -75,7 +76,7 @@ namespace Custom_Set
             _size--;
         }
 
-        public uint Find(uint valueToFind)
+        public int Find(int valueToFind)
         {
             for (var i = 0; i < _size; i++)
             {
@@ -92,21 +93,50 @@ namespace Custom_Set
             return default;
         }
 
-        public uint Begin()
+        public int Begin()
         {
             return _arr[0];
         }
 
-        public uint End()
+        public int End()
         {
             return _arr[^1];
+        }
+
+        public void AddRange(int[] rangeToAdd)
+        {
+            int[] filteredRange = RemoveZeroes(rangeToAdd);
+
+            foreach (int number in filteredRange)
+            {
+                AddValue(number);
+            }
+        }
+
+        public Set Intersect(Set set)
+        {
+            Set result = new Set();
+
+            foreach (int firstNumber in GetElements())
+            {
+                foreach (int secondNumber in set.GetElements())
+                {
+                    if (firstNumber == secondNumber)
+                    {
+                        result.AddValue(firstNumber);
+                    }
+                }
+            }
+
+            return result;
         }
 
         public Set Union(Set mnozhyna)
         {
             Set result = new Set();
-            result._size = _size + mnozhyna._size;
-            result._arr = GetElements().Union(mnozhyna.GetElements()).ToArray();
+
+            result.AddRange(_arr);
+            result.AddRange(mnozhyna.GetElements());
             
             return result;
         }
@@ -114,15 +144,38 @@ namespace Custom_Set
         public Set Except(Set mnozhyna)
         {
             Set result = new Set();
-            result._arr = _arr.Except(mnozhyna._arr).ToArray();
-            result._size = result._arr.Length;
+            bool alreadyThere;
+
+            foreach (int firstNumber in GetElements())
+            {
+                alreadyThere = false;
+
+                foreach (int secondNumber in mnozhyna.GetElements())
+                {
+                    if (firstNumber == secondNumber)
+                    {
+                        alreadyThere = true;
+                        break;
+                    }
+                }
+
+                if (!alreadyThere)
+                {
+                    result.AddValue(firstNumber);
+                }
+            }
 
             return result;
         }
 
-        public uint[] GetElements()
+        private int[] RemoveZeroes(int[] array)
         {
-            uint[] result = new uint[_size];
+            return array.Where(number => number != default).ToArray();
+        }
+
+        public int[] GetElements()
+        {
+            int[] result = new int[_size];
 
             for (var i = 0; i < _size; i++)
             {
@@ -132,7 +185,7 @@ namespace Custom_Set
             return result;
         }
 
-        public static Set Generate(int size, uint min, uint max)
+        public static Set Generate(int size, int min, int max)
         {
             Set result = new Set();
             Random random = new Random();
@@ -140,7 +193,7 @@ namespace Custom_Set
 
             for (var i = 0; i < result._size; i++)
             {
-                result.AddValue((uint)random.Next(0, (int)(max - min + 1)) + min);
+                result.AddValue((int)random.Next(0, (int)(max - min + 1)) + min);
             }
 
             return result;
@@ -148,7 +201,7 @@ namespace Custom_Set
 
         public void Print()
         {
-            for (var i = 0; i < _size; i++)
+            for (var i = 0; (i < _size) && (_arr[i] != 0); i++)
             {
                 System.Console.Write($"{_arr[i]} ");
             }
