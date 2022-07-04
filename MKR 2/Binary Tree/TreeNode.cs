@@ -10,7 +10,6 @@ namespace Binary_Tree
         public int Number { get; set; }
         public TreeNode LeftNode { get; set; }
         public TreeNode RightNode { get; set; }
-        public TreeNode Parent { get; set; }
 
         public TreeNode(int number)
         {

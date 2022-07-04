@@ -7,8 +7,7 @@ namespace Binary_Tree
         public static void Main(string[] args)
         {
             BinaryTree tree = BinaryTreeCapturers.CaptureBinaryTree();
-
-            tree.PreOrderTraversal(tree.Root);
+            tree.Print(tree.Root);
         }
     }
 }

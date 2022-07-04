@@ -121,5 +121,15 @@ namespace Binary_Tree
                 PreOrderTraversal(root.RightNode);
             }
         }
+
+        public void Print(TreeNode node, int level = 0)
+        {
+            if (node != null)
+            {
+                Print(node.LeftNode, level + 1);
+                System.Console.WriteLine($"{new string(' ', level * 5)} -> |{node.Number}|");
+                Print(node.RightNode, level + 1);
+            }
+        }
     }
 }
