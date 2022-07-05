@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Double Linked List",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom Expression Binary Tree", "Custom Expression Binary Tree\Custom Expression Binary Tree.csproj", "{C8A5056F-7F98-425A-8BF1-DF0418BA51CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Open hash table", "Open hash table\Open hash table.csproj", "{D461B3A6-0511-4459-AD2C-58205264D387}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{C8A5056F-7F98-425A-8BF1-DF0418BA51CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8A5056F-7F98-425A-8BF1-DF0418BA51CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8A5056F-7F98-425A-8BF1-DF0418BA51CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D461B3A6-0511-4459-AD2C-58205264D387}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D461B3A6-0511-4459-AD2C-58205264D387}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D461B3A6-0511-4459-AD2C-58205264D387}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D461B3A6-0511-4459-AD2C-58205264D387}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
