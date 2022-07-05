@@ -36,14 +36,63 @@ namespace Stack
         public static void ReverseStack(CustomStack<string> stackToReverse)
         {
             List<string> rows = new List<string>();
-            ListNode<string> current = stackToReverse._head;
 
-            while (string row in stackToReverse)
+            while (!stackToReverse.IsEmpty)
             {
-                rows.Append(row.Reverse().ToString());
+                rows.Add(string.Join("", stackToReverse.Pop().Reverse()));
             }
 
+            for (var i = rows.Count - 1; i >= 0; i--)
+            {
+                stackToReverse.Push(rows[i]);
+            }
+        }
 
+        public CustomStack<T> Union(CustomStack<T> stack)
+        {
+            CustomStack<T> result = new CustomStack<T>();
+
+            result.AddRange(GetElements().Reverse().ToArray());
+            result.AddRange(stack.GetElements().Reverse().ToArray());
+
+            return result;
+        }
+
+        public void AddRange(T[] range)
+        {
+            foreach (var item in range)
+            {
+                Push(item);
+            }
+        }
+
+        private T[] GetElements()
+        {
+            List<T> result = new List<T>();
+            ListNode<T> current = _head;
+
+            while (current != null)
+            {
+                result.Add(current.Data);
+                current = current.Next;
+            }
+
+            return result.ToArray();
+        }
+
+        public static void ReverseStack(CustomStack<double> stackToReverse)
+        {
+            List<double> numbers = new List<double>();
+
+            while (!stackToReverse.IsEmpty)
+            {
+                numbers.Add(double.Parse(string.Join("", stackToReverse.Pop().ToString().Reverse())));
+            }
+
+            for (var i = numbers.Count - 1; i >= 0; i--)
+            {
+                stackToReverse.Push(numbers[i]);
+            }
         }
 
         public T Peek()
@@ -65,6 +114,8 @@ namespace Stack
                 System.Console.Write($"{current} ");
                 current = current.Next;
             }
+
+            System.Console.WriteLine();
         }
 
         public IEnumerator<T> GetEnumerator()
